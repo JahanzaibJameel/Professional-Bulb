@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QUANTUM LUMINEX PRO | Advanced Lighting Control</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="particles-js" class="particles-js"></div>
+  <div class="holographic-overlay"></div>
+
+  <div class="quantum-panel">
+    <div class="panel-ambient-light"></div>
+
+    <div class="panel-header">
+      <div class="brand-logo">
+        <div class="logo-orb">
+          <div class="orb-core"></div>
+          <div class="orb-glow"></div>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">QUANTUM</span>
+          <span class="brand-sub">LUMINEX PRO</span>
+        </div>
+      </div>
+      <div class="system-monitor">
+        <div class="monitor-item">
+          <span class="monitor-label">SYSTEM</span>
+          <span class="monitor-value online">ACTIVE</span>
+        </div>
+        <div class="monitor-item">
+          <span class="monitor-label">NETWORK</span>
+          <div class="signal-quality">
+            <div class="signal-bar"></div>
+            <div class="signal-bar"></div>
+            <div class="signal-bar"></div>
+            <div class="signal-bar"></div>
+            <div class="signal-pulse"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-interface">
+      <div class="light-chamber">
+        <div class="bulb-container">
+          <div class="bulb" id="bulb">
+            <div class="filament"></div>
+            <div class="glow" id="glow"></div>
+            <div class="reflection"></div>
+          </div>
+          <div class="bulb-base">
+            <div class="screw"></div>
+          </div>
+        </div>
+        <div class="light-cone" id="lightCone"></div>
+        <div class="photon-particles" id="photonParticles"></div>
+      </div>
+
+      <div class="control-matrix">
+        <div class="data-display">
+          <div class="display-screen">
+            <div class="screen-row">
+              <span class="screen-label">STATUS</span>
+              <span class="screen-value" id="statusDisplay">STANDBY</span>
+            </div>
+            <div class="screen-row">
+              <span class="screen-label">INTENSITY</span>
+              <span class="screen-value" id="intensityDisplay">0%</span>
+            </div>
+            <div class="screen-row">
+              <span class="screen-label">TEMPERATURE</span>
+              <span class="screen-value" id="tempDisplay">32°C</span>
+            </div>
+            <div class="screen-row">
+              <span class="screen-label">ENERGY</span>
+              <span class="screen-value" id="energyDisplay">0.00 kWh</span>
+            </div>
+          </div>
+          <div class="display-visualizer">
+            <div class="visualizer-wave" id="visualizerWave"></div>
+          </div>
+        </div>
+
+        <div class="control-surface">
+          <div class="intensity-control">
+            <div class="dial" id="intensityDial">
+              <div class="dial-markers">
+                <div class="marker"></div>
+                <div class="marker"></div>
+                <div class="marker"></div>
+                <div class="marker"></div>
+                <div class="marker"></div>
+              </div>
+              <div class="dial-handle"></div>
+            </div>
+            <div class="dial-label">INTENSITY</div>
+          </div>
+
+          <button class="power-btn" id="powerBtn">
+            <span class="btn-text">POWER ON</span>
+            <span class="btn-icon"><i class="fas fa-power-off"></i></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-footer">
+      <div class="footer-item">
+        <span class="footer-label">FIRMWARE</span>
+        <span class="footer-value">v4.2.1</span>
+      </div>
+      <div class="footer-item">
+        <span class="footer-label">UPTIME</span>
+        <span class="footer-value" id="uptimeDisplay">00:00:00</span>
+      </div>
+      <div class="footer-item">
+        <span class="footer-label">SERIAL</span>
+        <span class="footer-value">QLP-9472-2864</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
